@@ -1,5 +1,2 @@
 ### text_generator
-Tensorflow Model to generate poetry in the style of Robert Frost
-using Kaggle dataset https://www.kaggle.com/archanghosh/robert-frost-collection/tasks?taskId=2951
-
-(currently in-progess)
+RNN Model to generate text merging the style of various authors using public domain texts. Authors include Oscar Wilde, Jack London, Arthur Conan Doyle, Mark Twain and Robert Frost, among others.
