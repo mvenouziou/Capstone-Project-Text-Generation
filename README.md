@@ -1,4 +1,4 @@
 ### text_generator
-RNN Model to generate text merging the style of various authors using public domain texts. Authors include Oscar Wilde, Jack London, Arthur Conan Doyle, Mark Twain and Robert Frost, among others.
+Aa character-level sequence model that can generate text according to a distribution learned from the dataset. It is coded based on techniques from Imperial College London's Coursera course, "Customising your models with Tensorflow 2" and the Tensorflow documentation. 
 
-Try out my interactive web app implementation here: https://www.communicatemission.com//ml-projects
+See my web app implementation at www.communicatemission.com/ml-projects#text_generation
