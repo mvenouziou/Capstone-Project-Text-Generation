@@ -18,16 +18,21 @@ This program constructs a character-level sequence model to generate text accord
     ---
 ### Credits / Citations / Attributions:
 
+Linear Model and Shared Code
+
+- Other than items noted in previous sections, this python code and linear model structure is based heavily on code found in Imperial College London's Coursera course "Customising your models with Tensorflow 2" *(https://www.coursera.org/learn/customising-models-tensorflow2)* and the Tensorflow RNN text generation documentation *(https://www.tensorflow.org/tutorials/text/text_generation?hl=en).*
+
 Nonlinear Model:
 
 - This utilizes the pretrained Small BERT word embeddings from Tensorflow Hub, which they credit to Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova's paper "Well-Read Students Learn Better: On the Importance of Pre-training Compact Models." *(See https://tfhub.dev/google/collections/bert/1)*
 
-Linear Model and Shared Code
-
-- This model code, along with code shared with the nonlinear model, is based heavily on that found in Imperial College London's Coursera course, "Customising your models with Tensorflow 2" *(https://www.coursera.org/learn/customising-models-tensorflow2)* and the Tensorflow RNN text generation documentation *(https://www.tensorflow.org/tutorials/text/text_generation?hl=en).*
 
 Web App
 
 - The web app is built on the Anvil platform and (at the time of this writing) is hosted on Google Cloud server (CPU).
 
+
+---
+About
+Find me on LinkedIn: https://www.linkedin.com/in/movenouziou/ or GitHub: https://github.com/mvenouziou
 ---
