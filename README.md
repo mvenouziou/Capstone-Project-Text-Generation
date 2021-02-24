@@ -33,6 +33,8 @@ Web App
 
 
 ---
-About
+### About
+
 Find me on LinkedIn: https://www.linkedin.com/in/movenouziou/ or GitHub: https://github.com/mvenouziou
+
 ---
