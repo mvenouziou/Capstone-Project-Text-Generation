@@ -24,7 +24,11 @@ Linear Model and Shared Code
 
 Nonlinear Model:
 
-- This utilizes the pretrained Small BERT word embeddings from Tensorflow Hub, which they credit to Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova's paper "Well-Read Students Learn Better: On the Importance of Pre-training Compact Models." *(See https://tfhub.dev/google/collections/bert/1)*
+This utilizes the pretrained embeddings:
+
+- Small BERT word embeddings from Tensorflow Hub, (credited to Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova's paper "Well-Read Students Learn Better: On the Importance of Pre-training Compact Models." https://tfhub.dev/google/collections/bert/1)*
+- ELECTRA-Small++ from Tensorflow Hub, (credited to Kevin Clark and Minh-Thang Luong and Quoc V. Le and Christopher D. Manning's paper "ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators." https://hub.tensorflow.google.cn/google/electra_small/2)*
+
 
 
 Web App
