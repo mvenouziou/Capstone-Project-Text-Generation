@@ -14,6 +14,7 @@ This program constructs a character-level sequence model to generate text accord
 - Nonlinear model architecture uses parallel RNN's for word-level embeddings and character-level embeddings.
 - Manage RNN statefulness for independent data sources. The linear models credited below use a single continuous work, which necessarily implies a dependence relation between samples / batches. This model implements the ability to treat independent works (individual poems, books, authors, etc.) as truly independent samples by resetting RNN states and shuffling independent data sources.
 - Load and prepare data from multiple CSV and text files. Each rows from a CSV and each complete TXT file are treated as independent data sources. (CSV data prep accepts titles and content.)
+- Includes parameter to perturb learned probabilties in final generation function, to add extra variety to generated text.
     
     ---
 ### Credits / Citations / Attributions:
