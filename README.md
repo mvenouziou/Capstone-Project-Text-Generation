@@ -3,7 +3,7 @@
 This program constructs a character-level sequence model to generate text according to a character distribution learned from the dataset. It implements two different model architectures: "linear" and "nonlinear." The linear model uses character-level embeddings to form the model. The nonlinear model adds a parallel word level embedding network, which is merged with the character embedding model.
 
 - Try my web app implementation at www.communicatemission.com/ml-projects#text_generation (linear model only)
-- model files available at https://raw.githubusercontent.com/mvenouziou/text_generator.
+- model files available at https://github.com/mvenouziou/Project-Text-Generation.
 - See credits /attributions below
 
 
