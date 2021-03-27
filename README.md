@@ -1,6 +1,6 @@
 ### Nonlinear RNN for Text Generation
 
-This program constructs a character-level sequence model to generate text according to a character distribution learned from the dataset. It implements two different model architectures: "linear" and "nonlinear." The linear model uses character-level embeddings to form the model. The nonlinear model adds a parallel word level embedding network, which is merged with the character embedding model.
+This program constructs a character-level sequence model to generate text according to a character distribution learned from the dataset. It implements linear, nonlinear and distributional different model architectures. The linear model uses character-level embeddings to form the model. The nonlinear model adds a parallel word level embedding network, which is merged with the character embedding model.
 
 - Try my web app implementation at www.communicatemission.com/ml-projects#text_generation (linear model only)
 - model files available at https://github.com/mvenouziou/Project-Text-Generation.
@@ -8,14 +8,33 @@ This program constructs a character-level sequence model to generate text accord
 
 
 ### What's New? 
-*(Although very likely that others have created similar models, I personally have not seen them and these can be considered independent constructions. Citations for other content are below:)*
+*(These items are original in the sense that I personally have not seen them at the original time of coding. Citations are below for content I have seen elsewhere.)*
 
-- Option to implement either the standard linear model architecture (see credits below) or nonlinear architectures.
-- Nonlinear model architecture uses parallel RNN's for word-level embeddings and character-level embeddings.
-- Manage RNN statefulness for independent data sources. The linear models credited below use a single continuous work, which necessarily implies a dependence relation between samples / batches. This model implements the ability to treat independent works (individual poems, books, authors, etc.) as truly independent samples by resetting RNN states and shuffling independent data sources.
-- Load and prepare data from multiple CSV and text files. Each rows from a CSV and each complete TXT file are treated as independent data sources. (CSV data prep accepts titles and content.)
-- Includes parameter to perturb learned probabilties in final generation function, to add extra variety to generated text.
+Model Architectures:
+
+- Experiments with: Nonlinear model architecture uses parallel RNN's for word-level embeddings and character-level embeddings. 
+
+- Experiments with: Tensorflow Probability layers to create a more interpretable probability distribution model. (Character-model only). The standard text generation algorithm outputs logits, which we view as a distribution from which to generate the next character. Here, we formalize this as outputing our model as a TF Probability Distribution, using probablistic weights in the Dense layer (instead of scalars) and trained via maximum likelihood. 
+
+- Proper handling of GRU states for multiple stateful layers
+
+- Easily switch between model architectures through 'Paramaters' class object. Includes file management for organizing each architecture's checkpoints.
+
+
+Generation:
+
+- Add perturbations to learned probabilties in final generation function, to add extra variety to generated text.  (Included in addition to the 'temperature' control described in TF's documentation)
+
+Data Processing / Preparation:
+
+*These ideas are not original, but I have not seen it implemented in other text generation systems:*
+
+- Random crops and with random lengths and start locations. 
+
+- Load and prepare data from multiple CSV and text files. Each rows from a CSV and each complete TXT file are treated as independent data sources. (CSV data prep accepts titles and content.) 
+        
     
+
     ---
 ### Credits / Citations / Attributions:
 
