@@ -6,8 +6,8 @@ This program constructs a character-level sequence model to generate text accord
 - model files available at https://github.com/mvenouziou/Project-Text-Generation.
 - See credits /attributions below
 
-### Python / Google Colab
-This directory includes an ipnyb file to run the entire program through Google Colab. For clarity, I have also included the model paramaters and architecture as python files. (Their code is already included in the full ipnyb file.)
+##### Python / Google Colab
+This repository includes an ipnyb file to run the entire program through Google Colab. For clarity, I have also included the model paramaters and architecture as python files. (Their code is already included in the full ipnyb file.)
 
 
 ### What's New? 
