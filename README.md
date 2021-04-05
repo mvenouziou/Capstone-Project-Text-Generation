@@ -10,12 +10,16 @@ This program constructs a character-level sequence model to generate text accord
 This repository includes an ipnyb file to run the entire program through Google Colab. For clarity, I have also included the model paramaters and architecture as python files. (Their code is already included in the full ipnyb file.)
 
 
-### What's New? 
+##### What's New?
 *(These items are original in the sense that I personally have not seen them at the original time of coding. Citations are below for content I have seen elsewhere.)*
+
+Visualization:
+
+- Plotting confidence intervals for character predictions using utilizing Tensorflow Probability distribution layers.
 
 Model Architectures:
 
-- Experiments with: Nonlinear model architecture uses parallel RNN's for word-level embeddings and character-level embeddings. 
+- Experiments with: Nonlinear model architecture uses parallel RNN's with both word-level embeddings and character-level embeddings. 
 
 - Experiments with: Tensorflow Probability layers to create a more interpretable probability distribution model. (Character-model only). The standard text generation algorithm outputs logits, which we view as a distribution from which to generate the next character. Here, we formalize this as outputing our model as a TF Probability Distribution, using probablistic weights in the Dense layer (instead of scalars) and trained via maximum likelihood. 
 
@@ -24,18 +28,20 @@ Model Architectures:
 - Easily switch between model architectures through 'Paramaters' class object. Includes file management for organizing each architecture's checkpoints.
 
 
-Generation:
-
-- Add perturbations to learned probabilties in final generation function, to add extra variety to generated text.  (Included in addition to the 'temperature' control described in TF's documentation)
-
 Data Processing / Preparation:
 
-*These ideas are not original, but I have not seen it implemented in other text generation systems:*
+*These ideas are not all new, but I have not seen them implemented in text generation systems:*
 
 - Random crops and with random lengths and start locations. 
 
+- Standard (character level) generation separates inputs and targets by one letter (generating one char at a time). This is adjusted for word-embeddings to avoid leaking target data, and multiple characters are generated at a time.
+
 - Load and prepare data from multiple CSV and text files. Each rows from a CSV and each complete TXT file are treated as independent data sources. (CSV data prep accepts titles and content.) 
-        
+
+
+Generation:
+
+- Add perturbations to learned probabilties in final generation function, to add extra variety to generated text.  (Included in addition to the 'temperature' control described in TF's documentation)        
     
 
     ---
